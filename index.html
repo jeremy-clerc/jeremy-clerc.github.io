@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>J&eacute;r&eacute;my Clerc</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+    }
+    #name {
+      width: fit-content;
+      line-height: 200px;
+      margin: auto;
+      vertical-align: middle;
+      text-align: center;
+      font-size: xx-large;
+    }
+    .code {
+      width: fit-content;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="name">J&eacute;r&eacute;my Clerc</div>
+  <div class="code">
+    <pre>
+==> mail.tf <==
+
+provider "postfix" {
+  domain = "clerc.io"
+}
+
+resource "postfix_account" "account_for_jeremy" {
+  username = "jeremy"
+}
+
+==> deploy.yaml <==
+
+---
+- hosts: jeremy
+  tasks:
+    - name: install human package
+      apt:
+        name: human
+    </pre>
+  </div>
+</body>
+</html>
+
