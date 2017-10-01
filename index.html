@@ -31,7 +31,7 @@ provider "postfix" {
   domain = "clerc.io"
 }
 
-resource "postfix_account" "account_for_jeremy" {
+resource "postfix_user" "user_for_jeremy" {
   username = "jeremy"
 }
 
